@@ -10,7 +10,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   
-  <!-- Google Fonts: Inter (clean & modern) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   
   <script type="application/ld+json">
@@ -29,62 +28,80 @@
   </script>
 
   <style>
-    body { font-family: 'Inter', system-ui, sans-serif; }
+    body { 
+      font-family: 'Inter', system-ui, sans-serif; 
+      hyphens: auto; 
+      overflow-wrap: break-word; 
+      word-wrap: break-word; 
+    }
+    .prose p, .prose li {
+      hyphens: auto;
+      overflow-wrap: break-word;
+    }
+    .project-card {
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100 min-h-screen antialiased">
 
   <!-- Fixed Navbar -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800">
-    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-      <div class="text-2xl font-bold tracking-tight">Manish Sharma</div>
-      <nav class="hidden md:flex gap-10 text-sm font-medium">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <div class="text-xl sm:text-2xl font-bold tracking-tight">Manish Sharma</div>
+      <nav class="hidden md:flex gap-8 text-sm font-medium">
         <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
         <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
         <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
         <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
       </nav>
       <a href="https://www.linkedin.com/in/manishkld1/" target="_blank" rel="noopener noreferrer"
-         class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-5 py-2.5 rounded-lg text-sm font-medium transition">
+         class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm font-medium transition">
         <i class="fab fa-linkedin-in"></i> LinkedIn
       </a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="pt-32 pb-20 md:pt-48 md:pb-32 bg-gradient-to-b from-zinc-950 to-zinc-900">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div class="space-y-8">
-        <h1 class="text-5xl md:text-7xl font-bold leading-tight">Manish Sharma</h1>
-        <p class="text-3xl md:text-4xl text-blue-400 font-medium">AI Engineer</p>
-        <p class="text-xl md:text-2xl text-zinc-300 max-w-xl">
-          Secure AI/ML solutions for defense sector & smart infrastructure (NHAI) — 6+ years of experience building reliable, production-grade intelligent systems.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-medium transition">Get in Touch</a>
-          <a href="https://www.linkedin.com/in/manishkld1/" target="_blank" rel="noopener noreferrer"
-             class="border border-zinc-600 hover:border-zinc-400 px-8 py-4 rounded-xl font-medium transition flex items-center gap-2">
-            <i class="fab fa-linkedin"></i> Connect on LinkedIn
-          </a>
+  <section class="pt-28 pb-16 md:pt-48 md:pb-32 bg-gradient-to-b from-zinc-950 to-zinc-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="space-y-6">
+          <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">Manish Sharma</h1>
+          <p class="text-2xl sm:text-3xl md:text-4xl text-blue-400 font-medium">AI Engineer</p>
+          <p class="text-lg sm:text-xl md:text-2xl text-zinc-300 max-w-xl leading-relaxed text-wrap">
+            Secure AI/ML solutions for defense sector & smart infrastructure (NHAI) — 6+ years of experience building reliable, production-grade intelligent systems.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium transition text-base sm:text-lg">Get in Touch</a>
+            <a href="https://www.linkedin.com/in/manishkld1/" target="_blank" rel="noopener noreferrer"
+               class="border border-zinc-600 hover:border-zinc-400 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium transition flex items-center gap-2 text-base sm:text-lg">
+              <i class="fab fa-linkedin"></i> Connect
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="flex justify-center md:justify-end">
-        <!-- REPLACE THIS WITH YOUR REAL PHOTO (upload to repo as profile.jpg or use external link like Imgur) -->
-        <img 
-          src="profile.jpeg" 
-          alt="Manish Sharma - AI Engineer professional portrait"
-          class="w-72 md:w-96 rounded-2xl shadow-2xl object-cover ring-1 ring-blue-500/20"
-        />
+        <div class="flex justify-center md:justify-end mt-8 md:mt-0">
+          <img 
+            src="profile.jpg" 
+            alt="Manish Sharma - AI Engineer professional portrait"
+            class="w-64 sm:w-72 md:w-96 rounded-2xl shadow-2xl object-cover ring-1 ring-blue-500/20"
+          />
+        </div>
       </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="py-20 md:py-32 bg-zinc-900">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-4xl md:text-5xl font-bold mb-10 text-center md:text-left">About Me</h2>
-      <div class="prose prose-invert prose-lg max-w-none text-zinc-300 leading-relaxed">
+  <section id="about" class="py-16 md:py-32 bg-zinc-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center md:text-left">About Me</h2>
+      <div class="prose prose-invert prose-base sm:prose-lg max-w-full mx-auto md:mx-0 leading-relaxed text-zinc-300 text-wrap">
         <p>I'm an AI Engineer passionate about developing secure, ethical, and high-impact machine learning systems for mission-critical environments.</p>
         <p>Currently contributing to national defense initiatives and smart infrastructure/smart cities projects with NHAI. My work focuses on building robust AI/ML pipelines, computer vision solutions, model security, and edge deployment — always with responsibility and real-world reliability in mind.</p>
         <p>Strong background in Python, deep learning frameworks, scalable software engineering, and turning complex challenges into deployable intelligent solutions.</p>
@@ -93,37 +110,35 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="py-20 md:py-32">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center md:text-left">Experience</h2>
-      <div class="space-y-16">
-        <div class="grid md:grid-cols-12 gap-8">
+  <section id="experience" class="py-16 md:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center md:text-left">Experience</h2>
+      <div class="space-y-12 md:space-y-16">
+        <div class="grid md:grid-cols-12 gap-6">
           <div class="md:col-span-4">
-            <div class="text-blue-400 font-medium">Present – 202X</div>
-            <div class="text-xl font-semibold mt-1">AI Engineer</div>
-            <div class="text-zinc-400">Defense Sector Projects</div>
+            <div class="text-blue-400 font-medium text-base sm:text-lg">Present – 202X</div>
+            <div class="text-lg sm:text-xl font-semibold mt-1">AI Engineer</div>
+            <div class="text-zinc-400 text-sm sm:text-base">Defense Sector Projects</div>
           </div>
-          <div class="md:col-span-8 bg-zinc-900/60 border border-zinc-800 rounded-2xl p-8">
-            <ul class="space-y-4 text-zinc-300 list-disc pl-6">
+          <div class="md:col-span-8 bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 sm:p-8">
+            <ul class="space-y-3 text-zinc-300 list-disc pl-5 sm:pl-6 text-base leading-relaxed text-wrap">
               <li>Designing and implementing secure AI/ML models for high-stakes defense applications</li>
               <li>Developing robust computer vision and edge AI solutions for mission-critical environments</li>
               <li>Ensuring model security, ethical AI practices, and compliance in sensitive national projects</li>
-              <!-- Add 1-3 more real (non-sensitive) bullets when you customize -->
             </ul>
           </div>
         </div>
 
-        <div class="grid md:grid-cols-12 gap-8">
+        <div class="grid md:grid-cols-12 gap-6">
           <div class="md:col-span-4">
-            <div class="text-blue-400 font-medium">Previous period</div>
-            <div class="text-xl font-semibold mt-1">AI/ML Engineer – Smart Cities / Infrastructure</div>
-            <div class="text-zinc-400">National Highways Authority of India (NHAI) related projects</div>
+            <div class="text-blue-400 font-medium text-base sm:text-lg">Previous period</div>
+            <div class="text-lg sm:text-xl font-semibold mt-1">AI/ML Engineer – Smart Cities / Infrastructure</div>
+            <div class="text-zinc-400 text-sm sm:text-base">National Highways Authority of India (NHAI) related projects</div>
           </div>
-          <div class="md:col-span-8 bg-zinc-900/60 border border-zinc-800 rounded-2xl p-8">
-            <ul class="space-y-4 text-zinc-300 list-disc pl-6">
+          <div class="md:col-span-8 bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 sm:p-8">
+            <ul class="space-y-3 text-zinc-300 list-disc pl-5 sm:pl-6 text-base leading-relaxed text-wrap">
               <li>Building AI-powered solutions for smart infrastructure and traffic management</li>
               <li>Deploying scalable ML systems for national-scale projects</li>
-              <!-- Customize with your actual non-sensitive details -->
             </ul>
           </div>
         </div>
@@ -132,55 +147,129 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="py-20 md:py-32 bg-zinc-900">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center md:text-left">Core Skills</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        <div class="bg-zinc-800/70 border border-zinc-700 rounded-xl p-6 text-center hover:border-blue-600/50 transition">
-          <i class="fas fa-brain text-5xl text-blue-500 mb-4"></i>
-          <p class="font-medium">Machine Learning</p>
+  <section id="skills" class="py-16 md:py-32 bg-zinc-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center md:text-left">Core Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+        <div class="bg-zinc-800/70 border border-zinc-700 rounded-xl p-5 sm:p-6 text-center hover:border-blue-600/50 transition">
+          <i class="fas fa-brain text-4xl sm:text-5xl text-blue-500 mb-3"></i>
+          <p class="font-medium text-sm sm:text-base">Machine Learning</p>
         </div>
-        <div class="bg-zinc-800/70 border border-zinc-700 rounded-xl p-6 text-center hover:border-blue-600/50 transition">
-          <i class="fas fa-eye text-5xl text-blue-500 mb-4"></i>
-          <p class="font-medium">Computer Vision</p>
+        <div class="bg-zinc-800/70 border border-zinc-700 rounded-xl p-5 sm:p-6 text-center hover:border-blue-600/50 transition">
+          <i class="fas fa-eye text-4xl sm:text-5xl text-blue-500 mb-3"></i>
+          <p class="font-medium text-sm sm:text-base">Computer Vision</p>
         </div>
-        <div class="bg-zinc-800/70 border border-zinc-700 rounded-xl p-6 text-center hover:border-blue-600/50 transition">
-          <i class="fas fa-shield-halved text-5xl text-blue-500 mb-4"></i>
-          <p class="font-medium">AI Security</p>
+        <div class="bg-zinc-800/70 border border-zinc-700 rounded-xl p-5 sm:p-6 text-center hover:border-blue-600/50 transition">
+          <i class="fas fa-shield-halved text-4xl sm:text-5xl text-blue-500 mb-3"></i>
+          <p class="font-medium text-sm sm:text-base">AI Security</p>
         </div>
-        <div class="bg-zinc-800/70 border border-zinc-700 rounded-xl p-6 text-center hover:border-blue-600/50 transition">
-          <i class="fab fa-python text-5xl text-blue-500 mb-4"></i>
-          <p class="font-medium">Python</p>
+        <div class="bg-zinc-800/70 border border-zinc-700 rounded-xl p-5 sm:p-6 text-center hover:border-blue-600/50 transition">
+          <i class="fab fa-python text-4xl sm:text-5xl text-blue-500 mb-3"></i>
+          <p class="font-medium text-sm sm:text-base">Python</p>
         </div>
-        <div class="bg-zinc-800/70 border border-zinc-700 rounded-xl p-6 text-center hover:border-blue-600/50 transition">
-          <i class="fas fa-code text-5xl text-blue-500 mb-4"></i>
-          <p class="font-medium">Deep Learning</p>
+        <div class="bg-zinc-800/70 border border-zinc-700 rounded-xl p-5 sm:p-6 text-center hover:border-blue-600/50 transition">
+          <i class="fas fa-code text-4xl sm:text-5xl text-blue-500 mb-3"></i>
+          <p class="font-medium text-sm sm:text-base">Deep Learning</p>
         </div>
-        <!-- Feel free to add more icons/skills: e.g. PyTorch, TensorFlow, Edge AI, etc. -->
       </div>
     </div>
   </section>
 
+  <!-- Projects -->
+  <section id="projects" class="py-16 md:py-32">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center md:text-left">Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Project 1: VIDS -->
+        <div class="project-card bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg">
+          <div class="p-6 sm:p-8">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-3">VIDS (Video Incident Detection System)</h3>
+            <p class="text-zinc-300 text-base leading-relaxed mb-4 text-wrap">
+              AI-powered real-time video analytics system for automatic detection of incidents, anomalies, and events in surveillance feeds. Used for enhancing security and monitoring in critical infrastructure.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-medium">Computer Vision</span>
+              <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-medium">Real-time Processing</span>
+              <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-medium">Deep Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: ATCC -->
+        <div class="project-card bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg">
+          <div class="p-6 sm:p-8">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-3">ATCC (Automatic Traffic Counter & Classifier)</h3>
+            <p class="text-zinc-300 text-base leading-relaxed mb-4 text-wrap">
+              Intelligent traffic monitoring solution using AI to count vehicles, classify types, and analyze flow patterns for smart city and highway management.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-medium">Object Detection</span>
+              <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-medium">Traffic Analytics</span>
+              <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-medium">Python / ML Frameworks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: EsyConverter -->
+        <div class="project-card bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg">
+          <div class="p-6 sm:p-8">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-3">EsyConverter</h3>
+            <p class="text-zinc-300 text-base leading-relaxed mb-4 text-wrap">
+              User-friendly file and document conversion tool with smart format detection and batch processing capabilities. Supports multiple formats with AI-assisted optimization for quality and efficiency.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-medium">File Processing</span>
+              <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-medium">Automation</span>
+              <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-medium">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW Project 4: AI ChatBot -->
+        <div class="project-card bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg">
+          <div class="p-6 sm:p-8">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-3">AI ChatBot</h3>
+            <p class="text-zinc-300 text-base leading-relaxed mb-4 text-wrap">
+              Conversational AI assistant built with natural language understanding, context management, and integration capabilities. Designed for interactive user support, information retrieval, and task automation.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-medium">NLP</span>
+              <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-medium">Large Language Models</span>
+              <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-medium">Python</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p class="text-center text-zinc-400 mt-8 text-sm sm:text-base">
+        More projects available upon request or on LinkedIn.
+      </p>
+    </div>
+  </section>
+
   <!-- Contact -->
-  <section id="contact" class="py-20 md:py-32 text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-4xl md:text-5xl font-bold mb-8">Let's Connect</h2>
-      <p class="text-xl text-zinc-300 mb-10">Open to collaborations on secure AI, defense-tech, smart infrastructure, or interesting ML challenges.</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-6">
+  <section id="contact" class="py-16 md:py-32 text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Let's Connect</h2>
+      <p class="text-lg sm:text-xl text-zinc-300 mb-8 max-w-3xl mx-auto leading-relaxed text-wrap">
+        Open to collaborations on secure AI, defense-tech, smart infrastructure, or interesting ML challenges.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
         <a href="https://www.linkedin.com/in/manishkld1/" target="_blank" rel="noopener noreferrer"
-           class="bg-blue-600 hover:bg-blue-700 px-10 py-5 rounded-xl font-medium text-lg flex items-center justify-center gap-3 transition">
-          <i class="fab fa-linkedin-in text-xl"></i> Message on LinkedIn
+           class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-medium text-base sm:text-lg flex items-center justify-center gap-3 transition">
+          <i class="fab fa-linkedin-in text-lg sm:text-xl"></i> Message on LinkedIn
         </a>
         <a href="mailto:mdigitechnology@gmail.com"
-           class="border border-zinc-600 hover:border-zinc-400 px-10 py-5 rounded-xl font-medium text-lg flex items-center justify-center gap-3 transition">
-          <i class="fas fa-envelope"></i> Email Me
+           class="border border-zinc-600 hover:border-zinc-400 px-8 py-4 rounded-xl font-medium text-base sm:text-lg flex items-center justify-center gap-3 transition">
+          <i class="fas fa-envelope text-lg sm:text-xl"></i> Email Me
         </a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black border-t border-zinc-800 py-10 text-center text-zinc-500 text-sm">
+  <footer class="bg-black border-t border-zinc-800 py-8 text-center text-zinc-500 text-sm">
     <p>© 2026 Manish Sharma • AI Engineer • New Delhi, India</p>
     <p class="mt-2">Built with focus on secure & responsible AI</p>
   </footer>

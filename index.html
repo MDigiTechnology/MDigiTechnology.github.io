@@ -31,7 +31,7 @@
       --font-mono:    'JetBrains Mono', monospace;
 
       /* Fluid container – works from phones (~320px) to ultra-wide / 32–49"+ monitors */
-      --container: min(1320px, calc(100vw - 64px));
+      --container: min(1280px, calc(100vw - 48px));
       /* Fluid section padding */
       --section-pad: clamp(48px, 8vw, 120px);
     }
@@ -126,8 +126,9 @@
     .mobile-menu.open { display: flex; }
     .mobile-menu a { color: var(--text); font-size: 1.1rem; font-weight: 600; text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--border); }
 
-    /* Nav links collapse to hamburger below 900px */
-    @media (max-width: 900px) {
+    /* Nav links collapse to hamburger below 980px
+       (covers most “Desktop site” modes on phones which report ~980–1024px) */
+    @media (max-width: 980px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
     }
@@ -152,11 +153,27 @@
       width: var(--container);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: clamp(28px, 4vw, 64px);
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: clamp(20px, 3.5vw, 64px);
       align-items: center;
     }
-    /* Collapse hero at same breakpoint as navbar for consistency */
+
+    /* Medium screens / Desktop-mode on phones (reported width 700–1100px) */
+    @media (max-width: 1100px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        gap: clamp(16px, 3vw, 36px);
+      }
+      .profile-card {
+        max-width: 260px;
+        padding: 16px;
+      }
+      .hero-name {
+        font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+      }
+    }
+
+    /* Real phones + tablets – full single column */
     @media (max-width: 900px) {
       .hero-inner {
         grid-template-columns: 1fr;
@@ -164,6 +181,10 @@
         gap: 36px;
       }
       .hero-profile-wrap { order: -1; }
+      .profile-card {
+        max-width: 300px;
+        padding: 22px;
+      }
     }
 
     .hero-eyebrow {
@@ -284,7 +305,7 @@
     /* ── About ── */
     #about { background: var(--bg); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 60px); align-items: start; }
-    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 980px) { .about-grid { grid-template-columns: 1fr; } }
     .about-text { font-size: 0.95rem; line-height: 1.85; color: var(--text-muted); }
     .about-text p + p { margin-top: 16px; }
     .about-text strong { color: var(--text); font-weight: 600; }
@@ -448,7 +469,7 @@
     /* ── Contact ── */
     #contact { background: var(--bg); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(28px, 5vw, 60px); align-items: start; }
-    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 980px) { .contact-grid { grid-template-columns: 1fr; } }
     .contact-intro { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 32px; }
     .contact-links { display: flex; flex-direction: column; gap: 14px; }
     .contact-link {

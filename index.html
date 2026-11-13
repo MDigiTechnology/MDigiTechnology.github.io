@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Manish Kumar — AI Engineer · GenAI · RAG · Agentic AI · HPC</title>
-  <meta name="description" content="AI Engineer with 7+ years in tech (4+ years in AI/ML) — GenAI, RAG, Agentic AI, NVIDIA H200 HPC, computer vision for DRDO/defence and NHAI. Open to AI/ML/GenAI/HPC roles."/>
+  <title>Manish Kumar — AI Engineer · Computer Vision · Secure ML · RAG &amp; GenAI</title>
+  <meta name="description" content="AI Engineer with 8+ years in tech and 5+ years in AI/ML. Production computer vision (YOLO, NVIDIA Jetson) for NHAI/MoRTH Smart Highway/Expressway Projects and secure ML for DRDO. Open to AI Engineer / Computer Vision / GenAI roles in Delhi NCR."/>
   <meta name="color-scheme" content="dark"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -580,6 +580,193 @@
       .reveal { opacity: 1; transform: none; transition: none; }
       * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
     }
+
+    /* ═══ UI Polish Layer ═══ */
+    body {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 229, 255, 0.07), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 50%, rgba(168, 85, 247, 0.04), transparent),
+        var(--bg);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #00e5ff 0%, #22d3ee 50%, #67e8f9 100%);
+      color: #04101a;
+      font-weight: 700;
+      box-shadow: 0 0 28px rgba(0, 229, 255, 0.3), 0 4px 16px rgba(0, 0, 0, 0.25);
+      border: none;
+    }
+    .btn-primary:hover {
+      box-shadow: 0 0 48px rgba(0, 229, 255, 0.5), 0 8px 24px rgba(0, 0, 0, 0.3);
+      transform: translateY(-3px);
+      filter: brightness(1.05);
+    }
+    .btn-secondary {
+      backdrop-filter: blur(8px);
+    }
+    .btn-secondary:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 24px var(--cyan-glow);
+    }
+
+    .profile-card {
+      background: linear-gradient(160deg, rgba(13, 27, 46, 0.95) 0%, rgba(8, 18, 36, 0.98) 100%);
+      box-shadow:
+        0 0 0 1px rgba(0, 229, 255, 0.12),
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        0 0 80px rgba(0, 229, 255, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .profile-card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 0 0 1px rgba(0, 229, 255, 0.22),
+        0 28px 60px rgba(0, 0, 0, 0.5),
+        0 0 100px rgba(0, 229, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+    .status-badge {
+      background: linear-gradient(90deg, rgba(16, 185, 129, 0.12), rgba(16, 185, 129, 0.06));
+      border-color: rgba(16, 185, 129, 0.35);
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.12);
+    }
+
+    .hero-name span {
+      background: linear-gradient(135deg, #00e5ff 0%, #5eead4 40%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-title {
+      background: linear-gradient(90deg, var(--text) 0%, rgba(232, 238, 248, 0.75) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .timeline-card {
+      background: linear-gradient(145deg, rgba(13, 27, 46, 0.9), rgba(8, 16, 32, 0.95));
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .timeline-card:hover {
+      border-color: rgba(0, 229, 255, 0.28);
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35), 0 0 32px rgba(0, 229, 255, 0.08);
+      transform: translateX(4px);
+    }
+    .timeline-dot.active {
+      box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.2), 0 0 16px var(--cyan);
+    }
+
+    .skill-group {
+      background: linear-gradient(160deg, rgba(13, 27, 46, 0.85), rgba(10, 20, 38, 0.95));
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .skill-group:hover {
+      border-color: rgba(0, 229, 255, 0.3);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 24px rgba(0, 229, 255, 0.08);
+      transform: translateY(-3px);
+    }
+    .skill-pill {
+      transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .skill-pill:hover {
+      border-color: var(--cyan);
+      background: rgba(0, 229, 255, 0.1);
+      color: var(--cyan);
+      transform: translateY(-1px);
+    }
+
+    .project-card {
+      background: linear-gradient(165deg, rgba(13, 27, 46, 0.92) 0%, rgba(8, 16, 32, 0.98) 100%);
+      transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s;
+    }
+    .project-card:hover {
+      border-color: rgba(0, 229, 255, 0.35);
+      transform: translateY(-8px);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45), 0 0 48px rgba(0, 229, 255, 0.12);
+    }
+    .project-card.project-featured,
+    .project-card:has(.project-num:first-child) {
+      /* subtle emphasis handled via first card */
+    }
+    /* First project card (VIDS) - featured glow */
+    .projects-grid > .project-card:first-child {
+      border-color: rgba(0, 229, 255, 0.28);
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.1), 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 229, 255, 0.06);
+    }
+    .projects-grid > .project-card:first-child .project-num {
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    .highlight-item {
+      background: linear-gradient(135deg, rgba(13, 27, 46, 0.9), rgba(10, 22, 40, 0.95));
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .highlight-item:hover {
+      border-color: rgba(0, 229, 255, 0.3);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25), 0 0 24px rgba(0, 229, 255, 0.1);
+      transform: translateX(4px);
+    }
+
+    .edu-card {
+      background: linear-gradient(145deg, rgba(13, 27, 46, 0.9), rgba(8, 16, 32, 0.95));
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .edu-card:hover {
+      border-color: rgba(0, 229, 255, 0.3);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+      transform: translateY(-3px);
+    }
+
+    .contact-link {
+      background: linear-gradient(135deg, rgba(13, 27, 46, 0.9), rgba(10, 20, 38, 0.95));
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s;
+    }
+    .contact-link:hover {
+      border-color: rgba(0, 229, 255, 0.35);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25), 0 0 24px rgba(0, 229, 255, 0.12);
+      transform: translateX(4px);
+      color: var(--cyan);
+    }
+
+    .btn-send {
+      background: linear-gradient(135deg, #00e5ff 0%, #22d3ee 100%);
+      color: #04101a;
+      font-weight: 700;
+      box-shadow: 0 0 24px rgba(0, 229, 255, 0.25);
+      transition: box-shadow 0.3s, transform 0.3s, filter 0.3s;
+    }
+    .btn-send:hover {
+      box-shadow: 0 0 40px rgba(0, 229, 255, 0.45);
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
+
+    #navbar.scrolled {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    .tag-chip {
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .timeline-card:hover .tag-chip {
+      border-color: rgba(0, 229, 255, 0.25);
+    }
+
+    /* Soft section dividers */
+    section + section {
+      border-top: 1px solid rgba(0, 229, 255, 0.04);
+    }
+
+    /* Slightly richer card borders globally */
+    .timeline-card, .skill-group, .project-card, .edu-card, .highlight-item, .contact-link, .profile-card {
+      border-color: rgba(0, 229, 255, 0.14);
+    }
+
   </style>
 </head>
 <body>
@@ -625,14 +812,14 @@
       <div>
         <div class="hero-eyebrow reveal">
           <i class="fas fa-wand-magic-sparkles"></i>
-          AI Engineer · GenAI · RAG · Agentic AI · HPC · New Delhi
+          AI Engineer · Computer Vision · Secure ML · RAG &amp; GenAI · Delhi NCR
         </div>
         <h1 class="hero-name reveal reveal-delay-1">
           Manish<br/><span>Kumar</span>
         </h1>
-        <p class="hero-title reveal reveal-delay-2">GenAI · RAG · Agentic AI · Computer Vision · Secure ML · HPC</p>
+        <p class="hero-title reveal reveal-delay-2">Computer Vision · YOLO · NVIDIA Jetson · Secure ML · RAG &amp; GenAI</p>
         <p class="hero-bio reveal reveal-delay-2">
-          <strong>7+ years in tech</strong>, including <strong>4+ years in AI/ML</strong> — building <strong>GenAI apps, RAG pipelines &amp; Agentic workflows</strong>, real-time computer vision on <strong>NVIDIA Jetson</strong> for DRDO and NHAI, and managing <strong>NVIDIA H200 HPC GPU servers</strong> with SLURM and DDN 300TB storage for large-scale model training.
+          <strong>8+ years in technology</strong> and <strong>5+ years in AI/ML</strong>. Delivered production computer vision systems (YOLO on <strong>NVIDIA Jetson</strong>) for <strong>NHAI/MoRTH Smart Highway/Expressway Projects</strong> and secure/explainable ML for <strong>DRDO</strong>. Building practical experience in <strong>RAG and Generative AI</strong>. Open to AI Engineer / Computer Vision / GenAI roles in Delhi NCR.
         </p>
         <div class="hero-cta reveal reveal-delay-3">
           <a href="#projects" class="btn-primary"><i class="fas fa-layer-group"></i> View Projects</a>
@@ -640,7 +827,7 @@
         </div>
         <div class="hero-stats reveal reveal-delay-4">
           <div>
-            <div class="stat-num">4+</div>
+            <div class="stat-num">5+</div>
             <div class="stat-label">Years in AI/ML</div>
           </div>
           <div>
@@ -659,7 +846,7 @@
             <img src="profile.jpeg" alt="Manish Kumar" onerror="this.outerHTML='&lt;div class=&quot;profile-img-placeholder&quot;&gt;MK&lt;/div&gt;'"/>
           </div>
           <div class="profile-name">Manish Kumar</div>
-          <div class="profile-role">// AI Engineer · GenAI &amp; ML</div>
+          <div class="profile-role">// AI Engineer · Computer Vision · Secure ML</div>
           <div class="profile-badges">
             <div class="profile-badge"><i class="fas fa-wand-magic-sparkles"></i><span>GenAI · RAG · Agentic AI</span></div>
             <div class="profile-badge"><i class="fas fa-eye"></i><span>Computer Vision · Deep Learning</span></div>
@@ -668,7 +855,7 @@
           </div>
           <div class="status-badge">
             <span class="status-dot"></span>
-            Open to collaborations
+            Open to roles in Delhi NCR
           </div>
         </div>
       </div>
@@ -682,9 +869,9 @@
       <h2 class="section-title reveal reveal-delay-1">Building AI that thinks,<br/>retrieves &amp; acts</h2>
       <div class="about-grid">
         <div class="about-text reveal reveal-delay-1">
-          <p>I'm an AI Engineer with <strong>7+ years in tech and 4+ years specializing in AI/ML</strong> — across <strong>Generative AI, RAG pipelines, and Agentic AI workflows</strong> to production-grade computer vision, secure ML, and high-performance computing for mission-critical environments.</p>
-          <p>Right now I'm deeply focused on the <strong>GenAI/LLM stack</strong> — building RAG systems with vector databases, designing multi-step agentic workflows with tool use, and evaluating LLM safety and trustworthiness for enterprise and defence use cases. I also configure and manage <strong>NVIDIA H200 HPC GPU servers</strong>, including SLURM multi-node clusters, group policy and access controls, and DDN 300TB high-performance storage for accelerated AI/ML and Generative AI training at scale.</p>
-          <p>My edge: I don't just prototype. I've deployed real AI at scale — <strong>real-time YOLO models on NVIDIA Jetson</strong> across NHAI highways, adversarial robustness testing for DRDO, and LLM safety pipelines for Hugging Face and Gemma models. I bring <strong>rare depth across both modern GenAI and production ML engineering</strong>.</p>
+          <p>I'm an AI Engineer with <strong>8+ years in technology and 5+ years specializing in AI/ML</strong>. I build production computer vision and secure ML systems for mission-critical environments — most recently for <strong>DRDO (Ministry of Defence)</strong> and <strong>NHAI/MoRTH Smart Highway/Expressway Projects</strong>.</p>
+          <p>Core strengths: real-time object detection (<strong>YOLO</strong>), edge deployment on <strong>NVIDIA Jetson/CUDA</strong>, adversarial robustness (<strong>IBM ART</strong>), and model explainability (<strong>SHAP, LIME, DeepLift, DeepLiftSHAP</strong>). Currently expanding into <strong>Generative AI, RAG, and LLM applications</strong> with hands-on project experience.</p>
+          <p>My edge: I don't just prototype. I've deployed real AI at scale — <strong>real-time YOLO models on NVIDIA Jetson</strong> across NHAI highways and expressways, adversarial robustness and explainability testing for DRDO, and LLM safety evaluation for Hugging Face and Gemma models. Seeking <strong>AI Engineer, Computer Vision Engineer, or GenAI Engineer</strong> roles in Delhi NCR.</p>
         </div>
         <div class="about-highlights reveal reveal-delay-2">
           <div class="highlight-item">
@@ -735,6 +922,7 @@
             <div class="timeline-company"><i class="fas fa-building-shield"></i> GVR Technolabs Pvt. Ltd. · DRDO / Ministry of Defence Projects · New Delhi</div>
             <ul class="timeline-bullets">
               <li>Conducted AI/ML security assessments using IBM ART, Dioptra, and Captum — focusing on adversarial robustness, explainability, and model trustworthiness for defence applications.</li>
+              <li>Performed data quality assessment and model explainability on tabular and image datasets using SHAP, LIME, DeepLift, and DeepLiftSHAP; evaluated robustness, trustworthiness, consistency, and reliability.</li>
               <li>Performed evasion and poisoning attacks (PGD, APGD, CW, FAB, AutoAttack) against ResNet, MobileNet, VGG19, and DenseNet on ImageNet to evaluate and harden model resilience.</li>
               <li>Evaluated security and safety of Generative AI systems including Hugging Face models and locally deployed LLMs (Gemma); automated testing and validation workflows.</li>
               <li>Built robust testing pipelines using MLflow for tracking model accuracy under adversarial conditions.</li>
@@ -757,10 +945,10 @@
           <div class="timeline-meta">Aug 2022 – Oct 2024 <span>· 2 years 2 months</span></div>
           <div class="timeline-card">
             <div class="timeline-role">R&amp;D Engineer – AI/ML</div>
-            <div class="timeline-company"><i class="fas fa-road"></i> VaaaN Infra Pvt. Ltd. · NHAI/MoRTH Smart Highway Projects · Faridabad</div>
+            <div class="timeline-company"><i class="fas fa-road"></i> VaaaN Infra Pvt. Ltd. · NHAI/MoRTH Smart Highway/Expressway Projects · Faridabad, Delhi NCR</div>
             <ul class="timeline-bullets">
-              <li>Developed and optimized YOLO-based vehicle detection and classification models for smart highway surveillance under NHAI/MoRTH mandate.</li>
-              <li>Built custom training datasets from highway camera feeds; trained models using YOLO, OpenCV, and Darknet.</li>
+              <li>Developed and optimized YOLO-based vehicle detection and classification models for smart highway and expressway surveillance under NHAI/MoRTH projects.</li>
+              <li>Built custom training datasets from highway and expressway camera feeds; trained models using YOLO, OpenCV, and Darknet.</li>
               <li>Deployed real-time AI models on NVIDIA Jetson (Nano, Xavier NX, Orin NX) and GPU-based server environments for live incident detection.</li>
               <li>Developed live monitoring and analytics dashboards using React.js, Django REST Framework, and REST APIs — used by highway operations teams.</li>
             </ul>
@@ -777,7 +965,7 @@
           <div class="timeline-meta">Aug 2019 – Jul 2022 <span>· 3 years</span></div>
           <div class="timeline-card">
             <div class="timeline-role">IT Administrator</div>
-            <div class="timeline-company"><i class="fas fa-server"></i> VaaaN Infra Pvt. Ltd. · Faridabad</div>
+            <div class="timeline-company"><i class="fas fa-server"></i> VaaaN Infra Pvt. Ltd. · Lucknow, Uttar Pradesh</div>
             <ul class="timeline-bullets">
               <li>Managed Linux/Windows server infrastructure, networking, and on-prem GPU workstations — the same systems later used to train and deploy AI/ML models, giving me deep ground-level fluency in the infra AI runs on.</li>
               <li>Administered network security, user access control, and system hardening — foundational experience that now informs my approach to secure AI/ML deployment and model trustworthiness.</li>
@@ -874,6 +1062,9 @@
             <span class="skill-pill">MLflow</span>
             <span class="skill-pill">Adversarial Robustness</span>
             <span class="skill-pill">Evasion / Poisoning</span>
+            <span class="skill-pill">SHAP</span>
+            <span class="skill-pill">LIME</span>
+            <span class="skill-pill">DeepLift</span>
             <span class="skill-pill">Model Explainability</span>
           </div>
         </div>
@@ -913,8 +1104,49 @@
       <h2 class="section-title reveal reveal-delay-1">Featured Work</h2>
       <div class="projects-grid">
 
-        <div class="project-card project-genai-featured reveal">
-          <div class="project-num">01 · Featured</div>
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-num">01 · Featured · NHAI</div>
+          <div class="project-icon"><i class="fas fa-road"></i></div>
+          <div class="project-title">VIDS — Video Incident Detection System</div>
+          <p class="project-desc">Real-time AI video analytics for automatic road incident and anomaly detection on NHAI highways and expressways. Deployed on NVIDIA Jetson edge devices. Live monitoring dashboard built with Django and React for highway operations teams.</p>
+          <div class="project-footer">
+            <span class="project-tag">YOLOv4</span>
+            <span class="project-tag">OpenCV</span>
+            <span class="project-tag">Jetson Xavier NX</span>
+            <span class="project-tag">Django</span>
+            <span class="project-tag">React</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-num">02 · NHAI</div>
+          <div class="project-icon"><i class="fas fa-car-side"></i></div>
+          <div class="project-title">ATCC — Automatic Traffic Counter &amp; Classifier</div>
+          <p class="project-desc">AI-powered vehicle detection and classification system for NHAI/MoRTH Smart Highway/Expressway Projects — counting vehicles, classifying types (trucks, bikes, cars), and analysing flow patterns. Trained on custom datasets from live highway cameras.</p>
+          <div class="project-footer">
+            <span class="project-tag">Object Detection</span>
+            <span class="project-tag">Darknet</span>
+            <span class="project-tag">CUDA GPU</span>
+            <span class="project-tag">Traffic Analytics</span>
+          </div>
+        </div>
+
+        <div class="project-card project-featured reveal reveal-delay-3">
+          <div class="project-num">03 · Defence</div>
+          <div class="project-icon"><i class="fas fa-shield-virus"></i></div>
+          <div class="project-title">Adversarial Robustness Framework</div>
+          <p class="project-desc">Security testing suite for CNN resilience against adversarial attacks — PGD, APGD, CW, FAB, AutoAttack on ResNet, MobileNet, VGG19, DenseNet. MLflow tracking for accuracy degradation metrics. Built for DRDO/Ministry of Defence vision systems.</p>
+          <div class="project-footer">
+            <span class="project-tag">IBM ART</span>
+            <span class="project-tag">PyTorch</span>
+            <span class="project-tag">Captum</span>
+            <span class="project-tag">MLflow</span>
+            <span class="project-tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="project-card project-genai reveal">
+          <div class="project-num">04</div>
           <div class="project-icon"><i class="fas fa-database"></i></div>
           <div class="project-title">RAG-powered Document QA System</div>
           <p class="project-desc">End-to-end Retrieval-Augmented Generation pipeline that ingests PDFs and documents, chunks and embeds them into a vector store, and serves grounded answers via an LLM — eliminating hallucinations with source citations. Built with FastAPI backend and a React chat UI.</p>
@@ -928,7 +1160,7 @@
         </div>
 
         <div class="project-card project-genai reveal reveal-delay-1">
-          <div class="project-num">02</div>
+          <div class="project-num">05</div>
           <div class="project-icon"><i class="fas fa-robot"></i></div>
           <div class="project-title">Agentic AI Assistant</div>
           <p class="project-desc">Multi-step AI agent built on the ReAct pattern — reasons, selects tools, calls APIs, and executes tasks autonomously across multiple turns. Supports web search, file reading, code execution, and memory across sessions. Designed for real-world task automation.</p>
@@ -942,7 +1174,7 @@
         </div>
 
         <div class="project-card project-genai reveal reveal-delay-2">
-          <div class="project-num">03</div>
+          <div class="project-num">06</div>
           <div class="project-icon"><i class="fas fa-comments"></i></div>
           <div class="project-title">AI ChatBot — LLM + RAG</div>
           <p class="project-desc">Conversational AI assistant powered by LLMs with RAG-backed knowledge retrieval. Context-aware multi-turn dialogue with intent detection, fallback handling, and integration hooks for external APIs. Supports local (Ollama/Gemma) and cloud LLM backends.</p>
@@ -952,47 +1184,6 @@
             <span class="project-tag">Ollama</span>
             <span class="project-tag">NLP</span>
             <span class="project-tag">Python</span>
-          </div>
-        </div>
-
-        <div class="project-card project-featured reveal reveal-delay-3">
-          <div class="project-num">04 · Defence</div>
-          <div class="project-icon"><i class="fas fa-shield-virus"></i></div>
-          <div class="project-title">Adversarial Robustness Framework</div>
-          <p class="project-desc">Security testing suite for CNN resilience against adversarial attacks — PGD, APGD, CW, FAB, AutoAttack on ResNet, MobileNet, VGG19, DenseNet. MLflow tracking for accuracy degradation metrics. Built for DRDO/Ministry of Defence vision systems.</p>
-          <div class="project-footer">
-            <span class="project-tag">IBM ART</span>
-            <span class="project-tag">PyTorch</span>
-            <span class="project-tag">Captum</span>
-            <span class="project-tag">MLflow</span>
-            <span class="project-tag">Docker</span>
-          </div>
-        </div>
-
-        <div class="project-card reveal reveal-delay-1">
-          <div class="project-num">05 · NHAI</div>
-          <div class="project-icon"><i class="fas fa-road"></i></div>
-          <div class="project-title">VIDS — Video Incident Detection System</div>
-          <p class="project-desc">Real-time AI video analytics for automatic road incident and anomaly detection on NHAI highways. Deployed on NVIDIA Jetson edge devices. Live monitoring dashboard built with Django and React for highway operations teams.</p>
-          <div class="project-footer">
-            <span class="project-tag">YOLOv4</span>
-            <span class="project-tag">OpenCV</span>
-            <span class="project-tag">Jetson Xavier NX</span>
-            <span class="project-tag">Django</span>
-            <span class="project-tag">React</span>
-          </div>
-        </div>
-
-        <div class="project-card reveal reveal-delay-2">
-          <div class="project-num">06 · NHAI</div>
-          <div class="project-icon"><i class="fas fa-car-side"></i></div>
-          <div class="project-title">ATCC — Automatic Traffic Counter &amp; Classifier</div>
-          <p class="project-desc">AI-powered vehicle detection and classification system for NHAI/MoRTH smart highways — counting vehicles, classifying types (trucks, bikes, cars), and analysing flow patterns. Trained on custom datasets from live highway cameras.</p>
-          <div class="project-footer">
-            <span class="project-tag">Object Detection</span>
-            <span class="project-tag">Darknet</span>
-            <span class="project-tag">CUDA GPU</span>
-            <span class="project-tag">Traffic Analytics</span>
           </div>
         </div>
 
@@ -1018,7 +1209,7 @@
           <div class="edu-icon"><i class="fas fa-laptop-code"></i></div>
           <div>
             <div class="edu-degree">B.Sc. Information Technology</div>
-            <div class="edu-school">Maharishi University</div>
+            <div class="edu-school">Maharishi University of Information Technology, Lucknow</div>
             <div class="edu-year">2018</div>
           </div>
         </div>
@@ -1043,7 +1234,7 @@
       <h2 class="section-title reveal reveal-delay-1">Let's Connect</h2>
       <div class="contact-grid">
         <div class="contact-info reveal reveal-delay-1">
-          <p class="contact-intro">Open to <strong>AI/ML Engineer</strong>, <strong>GenAI Engineer</strong>, <strong>LLM Engineer</strong>, and <strong>ML Engineer</strong> roles — with a strong background in RAG, Agentic AI, computer vision, production ML, and high-performance computing (NVIDIA H200 / SLURM). Feel free to reach out (phone calls restricted during office hours — email or LinkedIn preferred).</p>
+          <p class="contact-intro">Open to <strong>AI Engineer</strong>, <strong>Computer Vision Engineer</strong>, and <strong>GenAI Engineer</strong> roles in <strong>Delhi NCR</strong> (Gurugram / Noida / Delhi). Strong background in production computer vision (YOLO, NVIDIA Jetson), secure &amp; explainable ML (DRDO), and growing RAG / LLM experience. Available for immediate opportunities — email or LinkedIn preferred.</p>
           <div class="contact-links">
             <a href="mailto:manishkld1@gmail.com" class="contact-link">
               <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
@@ -1113,7 +1304,7 @@
 
   <!-- ── FOOTER ── -->
   <footer>
-    <p>© 2026 Manish Kumar · AI Engineer · GenAI · RAG · Agentic AI · HPC · New Delhi, India</p>
+    <p>© 2026 Manish Kumar · AI Engineer · Computer Vision · Secure ML · RAG &amp; GenAI · Delhi NCR, India</p>
     <p style="margin-top:8px; color: var(--text-dim);">
       <a href="https://github.com/MDigiTechnology" target="_blank">GitHub</a> ·
       <a href="https://www.linkedin.com/in/manishkld1/" target="_blank">LinkedIn</a> ·
